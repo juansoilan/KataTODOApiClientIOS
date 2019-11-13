@@ -11,5 +11,4 @@ install:
   - pod _1.7.1_ install
 
 script:
-  - swiftlint
   - set -o pipefail && xcodebuild -workspace KataTODOAPIClient.xcworkspace -scheme 'KataTODOAPIClient' -destination 'platform=iOS Simulator,name=iPhone 8' build test CODE_SIGN_IDENTITY=- | xcpretty -c
